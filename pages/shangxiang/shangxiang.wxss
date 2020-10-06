@@ -1,0 +1,34 @@
+/* pages/shangxiang/shangxiang.wxss */
+.wrap swiper{
+  height: 70vw;
+  text-align: center;
+}
+.wrap swiper image{
+  width: 60%;
+}
+.yan{
+  color: red;
+}
+.room{
+  height: 15vw;
+  line-height: 15vw;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-around;
+}
+.room navigator{
+  width: 20%;
+  text-align: center;
+}
+.jia{
+  background-color: yellow;
+  color: #fff;
+}
+.lij{
+  background-color: red;
+  color: #fff;
+}

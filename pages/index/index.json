@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "search": "../../commit/secher/secher"
+  },
+  "navigationBarTitleText": "黑马优购"
+}

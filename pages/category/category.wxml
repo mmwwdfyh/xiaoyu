@@ -1,0 +1,27 @@
+<view class="wrap">
+  <!-- 搜索 -->
+  <search bindtap="toogle"></search>
+  <!-- 左边 -->
+  <view class="left">
+    <view>
+      <navigator wx:for="{{cateleftlist}}" wx:key="index" bindtap="hander" data-index="{{index}}">
+        {{item}}
+      </navigator>
+    </view>
+  </view>
+  <!-- 右边 -->
+  <!-- <view> -->
+  <scroll-view class="right" scroll-top="{{scrollTop}}" scroll-y>
+    <view class="right_tops" wx:for="{{caterightlist}}" wx:key="index" wx:for-item="item1">
+      <view class="right_name">{{item1.cat_name}}</view>
+      <view class="fyh">
+        <navigator class="right_title" wx:for="{{item1.children}}" wx:for-item="item2" wx:key="index"
+          url="/pages/shanglie/shanglie?cid={{item2.cat_id}}">
+          <image mode="widthFix" src="{{item2.cat_icon}}"></image>
+          <navigator>{{item2.cat_name}}</navigator>
+        </navigator>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- </view> -->
+</view>

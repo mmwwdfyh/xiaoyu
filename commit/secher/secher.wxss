@@ -1,0 +1,17 @@
+/* commit/secher/secher.wxss */
+.seach {
+  width: 100%;
+  padding: 10rpx;
+  background-color: red;
+  margin-bottom: 10rpx;
+}
+.seach navigator {
+  width: 98%;
+  height: 60rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 15rpx;
+  color: #666;
+}

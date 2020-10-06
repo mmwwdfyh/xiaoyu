@@ -1,0 +1,67 @@
+/* pages/category/category.wxss */
+.wrap {
+  width: 100%;
+  height: 100%;
+}
+
+.left {
+  position: fixed;
+  left: 0;
+  width: 29%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  flex-shrink: 0;
+  background-color: #ccc;
+}
+
+.left navigator {
+  height: 86rpx;
+  margin-bottom: 4rpx;
+  line-height: 86rpx;
+  background-color: #ffffff;
+}
+
+.right {
+  position: fixed;
+  right: 0;
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+  flex-shrink: 0;
+  /* background-color: red; */
+}
+
+.right_tops {
+  width: 100%;
+  flex: 1;
+}
+
+.fyh {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.right_name {
+  margin-bottom: 30rpx;
+  display: inline-block;
+  height: 40rpx;
+  margin-top: 30rpx;
+  text-align: center;
+}
+
+.right_title {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 33.3%;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+  height: 219rpx;
+  text-align: center;
+}
+
+.right_title image {
+  height: 70rpx;
+}

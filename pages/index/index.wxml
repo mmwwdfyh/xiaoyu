@@ -1,0 +1,37 @@
+<view class="wrap">
+  <!-- 搜索框 -->
+  <search bindtap="toogle"></search>
+  <!-- 轮播图 -->
+  <view class="swipers">
+    <swiper indicator-dots="true" indicator-active-color="{{yan}}" indicator-color="rgba(255,255,255,233)"
+      autoplay="true" circular="true">
+      <swiper-item wx:for="{{swerplist}}" wx:key="index">
+        <image src="{{item.image_src}}"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!-- 导航 开始 -->
+  <view class="index_cate">
+    <navigator wx:for="{{tablist}}" wx:key="index" url="/pages/category/index" open-type="switchTab">
+      <image mode="widthFix" src="{{item.image_src}}"></image>
+    </navigator>
+  </view>
+  <!-- 导航 结束 -->
+  <!-- 楼层 开始 -->
+  <view class="index_floor">
+    <view class="floor_group" wx:for="{{floot}}" wx:for-item="item1" wx:for-index="index1" wx:key="floor_title">
+      <!-- 标题 -->
+      <view class="floor_title">
+        <image mode="widthFix" src="{{item1.floor_title.image_src}}"></image>
+      </view>
+      <!-- 内容 -->
+      <view class="floor_list">
+        <navigator wx:for="{{item1.product_list}}" wx:for-item="item2" wx:for-index="index2" wx:key="name"
+          url="{{item2.navigator_url}}">
+          <image mode="{{index2===0?'widthFix':'scaleToFill'}}" src="{{item2.image_src}}"></image>
+        </navigator>
+      </view>
+    </view>
+  </view>
+  <!-- 楼层 结束 -->
+</view>

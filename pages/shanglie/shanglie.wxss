@@ -1,0 +1,21 @@
+/* pages/shanglie/shanglie.wxss */
+
+.room {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.room image {
+  padding: 20rpx;
+}
+
+.room_right {
+  padding: 20rpx;
+}
+
+.room_right text {
+  color: red;
+  margin-top: 40rpx;
+}

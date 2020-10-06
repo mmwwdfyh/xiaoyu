@@ -1,0 +1,77 @@
+<!--pages/cart/cart.wxml-->
+<view class="sh_wrap">
+  <view class="gao">
+    <!-- 当收货地址 不存在 按钮显示 对象 空对象 bool类型也是true -->
+    <view wx:if="{{!address.userName}}">
+      <button class="shou" type="primary" bindtap="hearder" plain>
+        收货地址
+      </button>
+    </view>
+    <!-- 当收货地址 存在 详细信息就显示 -->
+    <view wx:else>
+      <view>
+        <view>{{address.userName}}</view>
+        <view>{{address.all}}</view>
+      </view>
+      <view>{{address.telNumber}}</view>
+    </view>
+  </view>
+
+  <view class="cont">
+  <view class="gou">购物车</view>
+  <!-- 数据渲染 -->
+  <view>
+    <block wx:if="{{cartlist.length!==0}}">
+      <view class="shu" wx:for="{{cartlist}}" wx:key="index">
+        <!-- 复选框 -->
+        <view>
+          <checkbox-group data-id="{{item.goods_id}}" bindchange="headitemalldaata">
+            <checkbox checked="{{item.checked}}"></checkbox>
+          </checkbox-group>
+        </view>
+        <view class="img">
+          <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+        </view>
+        <view class="shulist">
+          <text class="chao">{{item.goods_name}}</text>
+          <view class="room">
+            <text class="hong">￥{{item.goods_price}}</text>
+            <view class="shujia">
+              <view bindtap="handershuj" data-id="{{item.goods_id}}" data-operation="{{-1}}">-</view>
+              <view>{{item.num}}</view> 
+              <view bindtap="handershuj" data-id="{{item.goods_id}}" data-operation="{{1}}">+</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </block>
+    <block wx:else>
+      <image mode="widthFix"
+        src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1601897981539&di=b64beceeb737a91570ca6651c4522c6a&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658">
+      </image>
+    </block>
+  </view>
+</view>
+  <!-- 底部 -->
+  <view class="banner">
+    <!-- 全选 -->
+    <view class="quanx">
+      <checkbox-group bindchange="headitemall">
+        全选<checkbox checked="{{allcheck}}"></checkbox>
+      </checkbox-group>
+    </view>
+    <!-- 总价格 -->
+    <view class="zongjia">
+      <view>
+        合计：<text class="hong">${{totalPrice}}</text>
+      </view>
+    </view>
+
+    <!-- 结算 -->
+    <view class="jiasuan" bindtap="handjiasuan">
+      <view>
+        结算({{totalNum}})
+      </view>
+    </view>
+  </view>
+</view>

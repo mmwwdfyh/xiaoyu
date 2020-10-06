@@ -1,0 +1,5 @@
+<!--commit/Tabs/Tabs.wxml-->
+<view class="shangwrap_title">
+  <text wx:for="{{tabs}}" bindtap="handtop" data-index="{{index}}" wx:key="index"
+    class="{{item.isActive?'active':''}}">{{item.value}}</text>
+</view>

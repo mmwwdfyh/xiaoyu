@@ -1,0 +1,12 @@
+/* commit/Tabs/Tabs.wxss */
+.title_item{
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.shangwrap_title {
+  display: flex;
+  justify-content: space-around;
+}
+.active{
+  border-bottom: 5rpx solid red;
+}

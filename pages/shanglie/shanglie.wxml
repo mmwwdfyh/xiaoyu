@@ -1,0 +1,19 @@
+<!--pages/shanglie/shanglie.wxml-->
+<view class="shangwrap">
+  <search></search>
+  <!-- 标题选择 监听自定义事件-->
+  <Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange"></Tabs>
+  <view class="room">
+    <view class="room_top" wx:for="{{shanglist}}" wx:key="index" bindtap="toogle" data-id="item.id">
+      <navigator url="/pages/shangxiang/shangxiang?goods_id={{item.goods_id}}">
+        <image
+          src="{{item.goods_small_logo?item.goods_small_logo:'https://dss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=3922290090,3177876335&fm=26&gp=0.jpg'}}">
+        </image>
+        <view class="room_right">
+          <view>{{item.goods_name}}</view>
+          <text>{{item.goods_price}}</text>
+        </view>
+      </navigator>
+      </view>
+  </view>
+</view>
